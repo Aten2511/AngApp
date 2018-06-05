@@ -1,20 +1,115 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="main-logo" href="//www.au.dk/" itemprop="url">
+                <img src="/assets/logo2.PNG" alt="AU Logo">
+            </a> 
+            </div>
+            <div id="navbar1" class="navbar-collapse collapse">
+              <ul>
+                <li>
+                <a class="nav-item" href="http://envs.au.dk/videnudveksling/luft/maaling/">Luftmålinger</a> 
+                </li>
+                <li>
+                <a class="nav-item" routerLink="home" routerLinkActive="active">Aktuel luftkvalitet</a>
+                </li>  
+                <li>
+                    <a class="nav-item" routerLink="stations" routerLinkActive="active">Stationer</a>
+                </li>       
+               
+             <li>        
+                <a class="nav-item" routerLink="compounds" routerLinkActive="active">Stoffer</a>    
+            </li>
+             <li>        
+                <a class="nav-item" routerLink="stoffer">Meteorologi data</a>    
+            </li>
+            <li>        
+                <a href="#" class="nav-item" data-toggle="dropdown" role="button" aria-relevant="true" aria-expanded="false">Information<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item"><a class="dropdown-item" href="#" >Stationer</a></li>
+                    <li class="dropdown-item"><a  class="dropdown-item" href="#">Stoffer</a></li>
+                    <li class="dropdown-item"><a class="dropdown-item" href="#">Metoder</a></li>
+                    <li class="dropdown-item"><a class="dropdown-item" href="#">Målinger</a></li> 
+                    <li class="dropdown-item"><a class="dropdown-item" href="#">Luftforurening</a></li> 
+                    <li class="dropdown-item" class="divider"></li>
+                    <li class="dropdown-item"><a class="dropdown-item" href="#">Kontakt</a></li> 
+                    <li class="dropdown-item"><a class="dropdown-item" href="#">Om</a></li> 
+                </ul>
 
+            </li> 
+            </ul>      
+           
+            </div>
+            </div>
+            </nav>
+
+            
+           
+
+<router-outlet></router-outlet>
+
+
+<!--  <li >  
+                  
+                    <div class="dropdown">
+                        <a href="#" class="nav-item" data-toggle="dropdown" role="button" aria-relevant="true" aria-expanded="false">Stationer<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">København</li>
+                            <li class="dropdown-item"><a class="dropdown-item" routerLink="station" routerLinkActive="active">H.C. Andersen Boulevard</a></li>
+                            <li class="dropdown-item"><a  class="dropdown-item" routerLink="components" routerLinkActive="active" href="#">H.C. Ørested Institute</a></li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="#">Jagtvej</a></li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="#">Hvidovre</a></li>
+
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Odense</li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="#">Grønnelykkevej</a></li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="#">Rådhuset</a></li>
+                            <li class="dropdown-item" class="divider"></li>
+                            <li class="dropdown-header">Land</li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="#">Anholt</a></li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="#">Føllesbjerg</a></li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="#">Risø</a></li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="#">Udborg</a></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Aalborg</li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="#">Vesterbro</a></li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="#">Østerbro</a></li>
+                            <li class="dropdown-item" class="divider"></li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Aarhus</li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="#">Banegårdsgade</a></li>
+                            <li class="dropdown-item"><a class="dropdown-item" href="#">Botanisk Have</a></li>
+                            
+                          </ul>
+                    </div>
+                   
+
+                  
+               </li> -->
+         <!--       <li >  
+                  
+                  <div class="dropdown">
+                      <a href="#" class="nav-item" data-toggle="dropdown" role="button" aria-relevant="true" aria-expanded="false">Stoffer<span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                          <li class="dropdown-header">Gasser</li>
+                          <li class="dropdown-item"><a class="dropdown-item" href="#">NO<sub>2</sub></a></li>
+                          <li class="dropdown-item"><a  class="dropdown-item" href="#">NO<sub>x</sub></a></li>
+                          <li class="dropdown-item"><a class="dropdown-item" href="#">CO</a></li>
+                          <li class="dropdown-item"><a class="dropdown-item" href="#">O<sub>3</sub></a></li>
+                          <li class="dropdown-item"><a class="dropdown-item" href="#">SO<sub>2</sub></a></li>
+
+                          <li class="divider"></li>
+                          <li class="dropdown-header">Partikler</li>
+                          <li class="dropdown-item"><a class="dropdown-item" href="#">PM<sub>10</sub></a></li>
+                          <li class="dropdown-item"><a class="dropdown-item" href="#">PM<sub>2.5</sub></a></li>
+                          <li class="dropdown-item" class="divider"></li>
+                          
+                        </ul>
+                  </div>             
+             </li> -->
