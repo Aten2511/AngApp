@@ -133,9 +133,7 @@ constructor(private http : HttpService,private route: ActivatedRoute,private fb:
        (data: Data[]) => this.results = data,
        (err: any) => console.log("no data")
      );        
-     console.log(bool);  
-     var today=new Date();
-     console.log(today);  
+     
 
     }
     else{
@@ -188,6 +186,7 @@ async tabChanged($event) {
     
     this.dataSource = new MatTableDataSource<Data>(this.stofResults);
     this.dataSource.paginator = this.paginator;
+    //create json uri
     var theJSON = JSON.stringify(this.results);
     var uri = this.sanitizer.bypassSecurityTrustUrl("data:text/json;charset=UTF-8," + encodeURIComponent(theJSON));
     this.downloadJsonHref = uri;
@@ -196,8 +195,7 @@ async tabChanged($event) {
     }
   
     public async downloadCSV(){
-      new Angular5Csv(this.results, 'csv');     
-  
+      await new Angular5Csv(this.results, 'csv');      
      }
       public async downloadJSON() {
         var uri = this.sanitizer.bypassSecurityTrustUrl("data:text/json;charset=UTF-8," + encodeURIComponent(this.theJSON));
