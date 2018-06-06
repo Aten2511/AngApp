@@ -14,7 +14,7 @@
 
   <li>Måles: </li>
   <ul class="left-ul" *ngFor="let stof of stofs">
-         <li class="left-li"><a > {{stof.forkortelse}} ,</a> </li>
+         <li class="left-li"><a [routerLink]="['/compound', stof.stofId]"> {{stof.forkortelse}} ,</a> </li>
   </ul>    
  
 </ul>

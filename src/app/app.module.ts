@@ -13,7 +13,6 @@ import { AppComponent } from './app.component';
 import { StationComponent } from './station/station.component';
 import { Station2Component } from './station2/station2.component';
 import { HomeComponent } from './home/home.component';
-import { ComponentsComponent } from './components/components.component';
 //import services
 
 import { HttpClientModule } from '@angular/common/http'
@@ -38,7 +37,6 @@ import { DialogOverviewDialog2 } from './station3/station3.component';
     AppComponent,
     StationComponent,
     HomeComponent,
-    ComponentsComponent,
     StationsComponent,
     CompoundsComponent,
     Station2Component,
