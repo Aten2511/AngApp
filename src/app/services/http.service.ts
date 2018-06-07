@@ -14,7 +14,7 @@ import {Data} from '../models/data'
 })
 export class HttpService { 
 
-  url='http://localhost:18681/api/';
+  url='http://envs-atair-web.au.dk/luftdata/api/';
   //
 stations=[];
 station:Station;
