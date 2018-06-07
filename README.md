@@ -8,8 +8,8 @@ Make sure you have Node.js® and npm installed.
 go to the folder you have download the project and unzipe it. 
 Then perform the remaining steps with these terminal commands.
 
-cd AngApp-master
-npm install
+cd AngApp-master ,
+npm install , 
 npm start
 
 ## Development server
