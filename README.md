@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Make sure you have Node.js® and npm installed. 
 
-# Download  AngApp
+# Run  AngApp
 Go to the folder you have downloaded the project and unzipe it. 
 Then perform the remaining steps with these terminal commands.
 
