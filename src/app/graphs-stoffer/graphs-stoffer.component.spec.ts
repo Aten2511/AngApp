@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Station2Component } from './station2.component';
+import { GraphsStofferComponent } from './graphs-stoffer.component';
 
-describe('Station2Component', () => {
-  let component: Station2Component;
-  let fixture: ComponentFixture<Station2Component>;
+describe('GraphsStofferComponent', () => {
+  let component: GraphsStofferComponent;
+  let fixture: ComponentFixture<GraphsStofferComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Station2Component ]
+      declarations: [ GraphsStofferComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Station2Component);
+    fixture = TestBed.createComponent(GraphsStofferComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

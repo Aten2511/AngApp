@@ -2,6 +2,7 @@ export interface Data {
     maalested:string;
     compound:string;
     result : number;
-    date:Data; 
+    date:string; 
     unit:string;
+    stationName:string;
 };

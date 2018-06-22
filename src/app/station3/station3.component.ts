@@ -1,5 +1,4 @@
 import { Component, OnInit,ViewChild ,Pipe, PipeTransform,Sanitizer ,Inject  } from '@angular/core';
-import { Chart } from 'angular-highcharts';
 import { map, takeUntil, tap } from 'rxjs/operators';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { HttpService } from '../services/http.service';
@@ -45,7 +44,7 @@ export class Station3Component implements OnInit,AfterViewInit {
 
   selectedStation: Station;
   stofs:any;
-  results:Data[];
+  results:any;
   stofResults:Data[];
 
   //download as json
@@ -63,7 +62,7 @@ export class Station3Component implements OnInit,AfterViewInit {
     headers: ["maalested", "stof", "date","result","unit"]
   };
  //table 
-  displayedColumns = ['date', 'result', 'unit'];
+  displayedColumns = ['date', 'result'];
   dataSource : any;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
@@ -128,13 +127,9 @@ constructor(private http : HttpService,private route: ActivatedRoute,private fb:
      this.from= this.convert(this.options.value.datefrom);
      this.to= this.convert(this.options.value.dateto);
      this.fre=this.options.value.frekv;
-     this.http.GetDataByStationBydate(this.stationId,this.from,this.to,this.fre)
-     .subscribe(
-       (data: Data[]) => this.results = data,
-       (err: any) => console.log("no data")
-     );        
+     this.results= await this.http.GetDataByStationBydate(this.stationId,this.from,this.to,this.fre)
+     .toPromise();        
      
-
     }
     else{
       const dialogRef = this.dialog.open(DialogOverviewDialog, {
@@ -180,9 +175,9 @@ else{
   return true;
 }
 }
-async tabChanged($event) {
+ tabChanged($event) {
     this.isExpanded = $event.tab.textLabel;
-    this.stofResults=this.results.filter(obj=>  obj.compound===this.isExpanded);
+    this.stofResults=  this.results.filter(obj=>  obj.compound===this.isExpanded);
     
     this.dataSource = new MatTableDataSource<Data>(this.stofResults);
     this.dataSource.paginator = this.paginator;

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row row-offcanvas row-offcanvas-right">
-       <h3> {{selectedStation.navn}} </h3> 
+        <h3> {{selectedStation?.navn}} </h3>  
       <div class="col-lg-12 text-center">
           <p>
               <span class="text-info">Gasser:</span>
@@ -21,7 +21,7 @@
     <div>
          <div class="field-container">
  
-            <form class="form-container" [formGroup]="options" (ngSubmit)="getdata()" >
+            <form class="form-container" [formGroup]="options" (ngSubmit)="getGraph()" >
 
        <!--      <mat-form-field >           
              <mat-select placeholder="Vælg et stof" [formControl]="stofid" >
@@ -29,7 +29,7 @@
                       {{ stof.forkortelse }}
                     </mat-option>
              </mat-select>
-            </mat-form-field> -->
+            </mat-form-field> 
             <mat-form-field >
                 <input matInput [matDatepicker]="picker" placeholder="Vælg et år" [formControl]="dato">
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -41,41 +41,18 @@
                              {{ frekv.viewValue }}
                            </mat-option>
                     </mat-select>            
-            </mat-form-field>
+            </mat-form-field>-->
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Hent data</button>
             </div>
-
-            </form>    
+     </form>    
    
          </div>
-  
-  <table  class="table"> 
-      <thead>
-          <tr >
-              <th>Målt</th>   
-              <th>Stof</th>   
-              <th>Resultat</th>                           
-     
-          </tr>
-      </thead>
-      <tbody>
-
-          <tr *ngFor="let result of results;"  >
-            <td>{{result.date | date:'yyyy-MM-dd h:mm:ss a'}} </td>    
-            <td>{{result.compound }} </td> 
-            <td>{{result.result | number}}</td>            
-          </tr>
-
-          <tr *ngIf="results?.length == 0">
-            <td colspan="3" class="no-data-available">No data!</td>
-          </tr>
-
-          
-      </tbody>
-  </table>  
- 
-    
+       <div>
+        <div *ngIf="chart" [chart]="chart">
+         <div ></div>
+         </div>
+        </div>
     </div>
 
 </div>

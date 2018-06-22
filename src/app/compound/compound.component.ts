@@ -1,5 +1,4 @@
 import { Component, OnInit,ViewChild ,Pipe, PipeTransform,Sanitizer   } from '@angular/core';
-import { Chart } from 'angular-highcharts';
 import { map, takeUntil, tap,filter } from 'rxjs/operators';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { HttpService } from '../services/http.service';
@@ -119,7 +118,7 @@ constructor(private http : HttpService,private route: ActivatedRoute,private fb:
 }
     async tabChanged($event) {
     this.isExpanded = $event.tab.textLabel;
-    this.stofResults=this.results.filter(obj=>  obj.maalested===this.isExpanded);
+    this.stofResults=this.results.filter(obj=>  obj.stationName===this.isExpanded);
     
     this.dataSource = new MatTableDataSource<Data>(this.stofResults);
     this.dataSource.paginator = this.paginator;

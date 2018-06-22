@@ -5,20 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
  import {MatButtonModule,MatPaginatorModule,MatTableModule,MatNativeDateModule,
    MatFormFieldModule,MatInputModule,MatTabsModule, MatSelectModule,MatCheckboxModule,
    MatCardModule,MatSortModule ,MatGridListModule,MatDialogModule} from '@angular/material';
-import { ChartModule,HIGHCHARTS_MODULES } from 'angular-highcharts';
+
+
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatExpansionModule} from '@angular/material/expansion';
 
 import { AppComponent } from './app.component';
 import { StationComponent } from './station/station.component';
-import { Station2Component } from './station2/station2.component';
+import { GraphsStofferComponent } from './graphs-stoffer/graphs-stoffer.component';
 import { HomeComponent } from './home/home.component';
 //import services
+import { ChartModule } from 'angular-highcharts';
 
 import { HttpClientModule } from '@angular/common/http'
 import { DateAdapter } from '@angular/material';
 import { NativeDateAdapter } from '@angular/material';
-
 import { HttpService} from './services/http.service';
 import {DataService} from "./services/data.service";
 
@@ -39,7 +40,7 @@ import { DialogOverviewDialog2 } from './station3/station3.component';
     HomeComponent,
     StationsComponent,
     CompoundsComponent,
-    Station2Component,
+    GraphsStofferComponent,
     Station3Component,
     CompoundComponent,DialogOverviewDialog
     ,DialogOverviewDialog2
@@ -50,8 +51,8 @@ import { DialogOverviewDialog2 } from './station3/station3.component';
   imports: [
     BrowserModule,AppRoutingModule, BrowserAnimationsModule,
     MatButtonModule,MatFormFieldModule, MatInputModule,
-    MatCheckboxModule,MatCardModule,MatGridListModule,ChartModule,MatTableModule,
-    MatPaginatorModule,MatDatepickerModule,MatSortModule,MatSelectModule,
+    MatCheckboxModule,MatCardModule,MatGridListModule,MatTableModule,
+    MatPaginatorModule,MatDatepickerModule,MatSortModule,MatSelectModule,ChartModule,
     HttpClientModule,MatNativeDateModule,MatExpansionModule,ReactiveFormsModule,MatTabsModule,MatDialogModule
     
   ],

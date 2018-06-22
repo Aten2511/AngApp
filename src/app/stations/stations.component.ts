@@ -23,7 +23,7 @@ export class StationsComponent implements OnInit {
       (err: any) => console.log(err),
       () => console.log('successfully got all stations!')
     );    
-    
+    console.log(this.panels);
   }
   setStep(index: string) {
     this.isExpanded = index;

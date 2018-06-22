@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { Station2Component }   from './station2/station2.component';
 import { Station3Component }   from './station3/station3.component';
 
 import { StationsComponent }   from './stations/stations.component';
 import { StationComponent }   from './station/station.component';
+import { GraphsStofferComponent } from './graphs-stoffer/graphs-stoffer.component';
 
 import { HomeComponent }   from './home/home.component';
 import { CompoundsComponent }   from './compounds/compounds.component';
@@ -15,8 +15,8 @@ const routes: Routes = [
   { path: 'stations', component: StationsComponent },
   { path: 'station', component: StationComponent },
   { path: 'station/:id', component: StationComponent },
-  { path: 'station2/:id', component: Station2Component },
-  { path: 'station2/:id', component: Station2Component },
+  { path: 'station/:id', component: StationComponent },
+  { path: 'graphs-stoffer', component: GraphsStofferComponent },
   { path: 'station3/:id', component: Station3Component },
 
 /*   { path: 'log-in', component: LogInComponent },
