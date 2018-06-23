@@ -17,7 +17,7 @@ interface IData {results : Data[];}
 })
 export class HttpService { 
 
-  url='http://localhost:18681/api';
+  url='http://aqapi.azurewebsites.net/api';
   //
 stations=[];
 station:Station;
