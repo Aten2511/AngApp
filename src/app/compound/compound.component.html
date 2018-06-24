@@ -36,7 +36,7 @@
           </form>       
        </div>
 
-       <mat-tab-group  class="tab-group" [(selectedIndex)]="value" (selectedTabChange)="tabChanged($event)" >
+       <mat-tab-group  class="tab-group"  (selectedTabChange)="tabChanged($event)" >
             <mat-tab *ngFor="let station of stations" [label]="station.navn">
                  <ng-template matTabContent>
 

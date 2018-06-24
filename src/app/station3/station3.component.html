@@ -68,7 +68,7 @@
                     </li>
             </ul> 
        </div>
-       <mat-tab-group  class="tab-group" [(selectedIndex)]="value" (selectedTabChange)="tabChanged($event)" >
+       <mat-tab-group  class="tab-group" (selectedTabChange)="tabChanged($event)" >
             <mat-tab *ngFor="let stof of stofs" [label]="stof.forkortelse">
                  <ng-template matTabContent>
 
